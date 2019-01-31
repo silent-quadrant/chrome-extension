@@ -242,7 +242,6 @@ function protectPasswordInput(evt) {
             '<p>This notice will not display again for the duration of this session.</p>',
             '<button class="silent-quadrant-dismiss">I Understand</button>',
             '<img src="' + chrome.extension.getURL('images/spyglass.png') + '" alt="Logo" class="silent-quadrant-logo2" />',
-            '<div class="silent-quadrant-credit">credit: haveibeenpwned.com</div>',
             '</div>'
           ].join('');
 

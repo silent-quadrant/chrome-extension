@@ -1,0 +1,37 @@
+{
+  "name": "silent_quadrant_chrome",
+  "version": "1.0.2",
+  "description": "Stop using bad passwords.",
+  "dependencies": {
+    "js-sha1": "^0.6.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist; webpack --config webpack.config.js",
+    "package": "rm *.zip; zip -r silent-quadrant.zip dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eagle19243/silent-quadrant-chrome.git"
+  },
+  "keywords": [
+    "password",
+    "protect",
+    "api",
+    "haveibeenpwned",
+    "security",
+    "login",
+    "breach"
+  ],
+  "author": "Eagle19243",
+  "bugs": {
+    "url": "https://github.com/Eagle19243/silent-quadrant-chrome/issues"
+  },
+  "homepage": "https://github.com/Eagle19243/silent-quadrant-chrome#readme"
+}

@@ -1,0 +1,63 @@
+.vex-content {
+  background: #000 !important;
+  padding-top: 2em !important;
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+  padding-bottom: 0em !important;
+}
+.vex-dialog-message {
+  font-weight: bold;
+  margin-bottom: 0em !important;
+}
+.vex-dialog-input {
+  display: none !important;
+}
+.vex-dialog-buttons {
+  display: none !important;
+}
+.silent-quadrant-dialog-content {
+  color: #fff !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+.silent-quadrant-dialog-content p {
+  margin-bottom: 1em !important;
+  text-align: left !important;
+}
+.silent-quadrant-title {
+  text-align: center !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+}
+.silent-quadrant-dismiss {
+  margin-top: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  padding: 10px !important;
+  background: #575853 !important;
+  border-width: 1px !important;
+}
+.silent-quadrant-credit {
+  text-align: center !important;
+  font-size: 9px !important;
+}
+.silent-quadrant-credit a {
+  color: #fff !important;
+}
+.silent-quadrant-logo1 {
+  height: 19px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  margin-bottom: 35px !important;
+}
+.silent-quadrant-logo2 {
+  height: 60px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 20px !important;
+  display: block !important;
+}
+

@@ -238,7 +238,7 @@ function protectPasswordInput(evt) {
             '<img src="' + chrome.extension.getURL('images/logo.png') + '" alt="Silent Quadrant Logo" class="silent-quadrant-logo1" />',
             '<div class="silent-quadrant-title">Unsafe Password Detected</div>',
             '<p>The password you entered has been found in ' + numberFormatter(parseInt(data[1]))  + ' data breaches and is not safe to use.</p>',
-            '<p>A password that has been involved in a data breach is easily accessible to attackers. Please change this password wherever you use it so it can not be leveraged to gain access to your account(s).</p>',
+            '<p>A password that has been involved in a data breach is easily accessible to attackers. Please change this password wherever you use it so it cannot be leveraged to gain access to your account(s).</p>',
             '<p>This notice will not display again for the duration of this session.</p>',
             '<button class="silent-quadrant-dismiss">I Understand</button>',
             '<img src="' + chrome.extension.getURL('images/spyglass.png') + '" alt="Logo" class="silent-quadrant-logo2" />',

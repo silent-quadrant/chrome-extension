@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "rm -rf dist; webpack --config webpack.config.js",
-    "package": "rm *.zip; zip -r silent-quadrant.zip dist"
+    "package": "cd dist; rm *.zip; zip -r ../silent-quadrant.zip *"
   },
   "repository": {
     "type": "git",

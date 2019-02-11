@@ -1,6 +1,6 @@
 {
   "name": "Silent Quadrant Password Protection",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Silent Quadrant Password Protection alerts you about breached credentials.",
   "manifest_version": 2,
   "icons": {
@@ -16,12 +16,12 @@
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "*://api.pwnedpasswords.com/*"
   ],
   "web_accessible_resources": [
     "images/logo.png",
     "images/spyglass.png"
   ],
-  "homepage_url": "https://github.com/Eagle19243/silent-quadrant-chrome#readme",
-  "offline_enabled": false
+  "homepage_url": "https://github.com/silent-quadrant/chrome-extension#readme"
 }

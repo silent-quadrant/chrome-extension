@@ -224,7 +224,7 @@ function protectPasswordInput(evt) {
   var hashPrefix = hash.slice(0, 5);
   var shortHash = hash.slice(5);
   var xmlHttp = new XMLHttpRequest();
-
+  
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
       var resp = xmlHttp.responseText.split("\n");

@@ -286,6 +286,21 @@ function protectPasswordInput(evt) {
 
 
 // Bootstrap our passProtect functionality after the page has fully loaded.
+var mutationObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function() {
+    protectInputs();
+  });
+});
+
+mutationObserver.observe(document.documentElement, {
+  attributes: true,
+  characterData: true,
+  childList: true,
+  subtree: true,
+  attributeOldValue: true,
+  characterDataOldValue: true
+});
+
 if (window.attachEvent) {
   window.attachEvent("onload", protectInputs);
 } else {
@@ -305,3 +320,4 @@ if (window.attachEvent) {
     }
   }
 }
+

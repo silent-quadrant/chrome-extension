@@ -3,7 +3,7 @@
 ## What is Silent Quadrant Password Protection?
 
 Silent Quadrant Password Protection is an extension that you can drop into any web page which dramatically improves the security of users accessing your website.
-This extension works on Chrome and Firefox.
+This extension works on Chrome, Firefox and Microsoft Edge.
 
 Silent Quadrant Password Protection works by binding itself to all `input` elements on the page of type
 `email` or `password`. Whenever a user enters a new value into one of these
@@ -30,7 +30,7 @@ necessary, we can all help make the web a safer place &lt;3
 2. Open terminal, navigate to the downloaded repository and run commands below:
     ```
     npm install
-    npm run build
+    npm run build-chrome // (npm run build-firefox, npm run build-edge)
     ```
     After run these commands, you will see `dist` folder generated.
     
@@ -46,6 +46,15 @@ necessary, we can all help make the web a safer place &lt;3
     3. Click `Load Temporary Add-on`
     4. Open the `dist` folder and select any file.
        The extension will be installed, and will stay installed until you restart Firefox.
+       
+- Microsoft Edge
+    1. Open Microsoft Edge and type `about:flags` into the address bar.
+    2. Select the Enable extension developer features checkbox.
+       If you don't have the Windows 10 Anniversary Update or later, this option will not be available.
+    3. Select More (...) to open the menu.
+    4. Select Extensions from the menu.
+    5. Select the Load extension button.
+    6. Navigate to `dist` folder and select the Select Folder button. 
     
 Now you are able to use Silent Quadrant Password Protection Secure Extension.
 

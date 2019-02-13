@@ -1,6 +1,7 @@
 {
   "name": "Silent Quadrant Password Protection",
-  "version": "1.0.6",
+  "author": "Eagle19243",
+  "version": "1.0.7",
   "description": "Silent Quadrant Password Protection alerts you about breached credentials.",
   "manifest_version": 2,
   "icons": {

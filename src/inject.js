@@ -94,7 +94,7 @@ function isIgnored(sensitiveData) {
  */
 function protectInputs() {
   var inputs = document.getElementsByTagName("input");
-
+  
   for (var i = 0; i < inputs.length; i++) {
     switch (inputs[i].type) {
       case "email":
@@ -224,7 +224,7 @@ function protectPasswordInput(evt) {
   var hashPrefix = hash.slice(0, 5);
   var shortHash = hash.slice(5);
   var xmlHttp = new XMLHttpRequest();
-  
+
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
       var resp = xmlHttp.responseText.split("\n");
@@ -233,15 +233,25 @@ function protectPasswordInput(evt) {
         var data = resp[i].split(":");
 
         if (data[0].indexOf(shortHash) === 0) {
+          var logoURL = '';
+          var spyglassURL = '';
+          if (process.env.platform == "edge") {
+            logoURL = browser.extension.getURL('images/logo.png');
+            spyglassURL = browser.extension.getURL('images/spyglass.png');
+          } else {
+            logoURL = chrome.extension.getURL('images/logo.png');
+            spyglassURL = chrome.extension.getURL('images/spyglass.png');
+          }
+
           var message = [
             '<dic class="silent-quadrant-dialog-content">',
-            '<img src="' + chrome.extension.getURL('images/logo.png') + '" alt="Silent Quadrant Logo" class="silent-quadrant-logo1" />',
+            '<img src="' + logoURL + '" alt="Silent Quadrant Logo" class="silent-quadrant-logo1" />',
             '<div class="silent-quadrant-title">Unsafe Password Detected</div>',
             '<p>The password you entered has been found in ' + numberFormatter(parseInt(data[1]))  + ' data breaches and is not safe to use.</p>',
             '<p>A password that has been involved in a data breach is easily accessible to attackers. Please change this password wherever you use it so it cannot be leveraged to gain access to your account(s).</p>',
             '<p>This notice will not display again for the duration of this session.</p>',
             '<button class="silent-quadrant-dismiss">I Understand</button>',
-            '<img src="' + chrome.extension.getURL('images/spyglass.png') + '" alt="Logo" class="silent-quadrant-logo2" />',
+            '<img src="' + spyglassURL + '" alt="Logo" class="silent-quadrant-logo2" />',
             '</div>'
           ].join('');
 
@@ -288,6 +298,10 @@ if (window.attachEvent) {
 
     window.onload = newOnLoad;
   } else {
-    window.onload = protectInputs;
+    if (process.env.platform == "edge") {
+      protectInputs();
+    } else {
+      window.onload = protectInputs;
+    }
   }
 }
